@@ -1,0 +1,22 @@
+package interfaces;
+
+public class CustomerManager {
+	private Logger logger;
+	public CustomerManager(Logger logger) {
+		super();
+		this.logger = logger;
+	}
+//loosly-tigthly coupled
+public void add(Customer customer) {
+	System.out.println("musteri eklendi "+customer.getFirstName());
+	this.logger.log(customer.getFirstName());
+	//DatabaseLogger databaseLogger=new DatabaseLogger();
+	//logger.log(customer.getFirstName()+"veri tabanina loglandi");
+}
+public void delete(Customer customer) {
+	System.out.println("musteri silindi "+customer.getFirstName());
+	this.logger.log(customer.getFirstName());
+	//DatabaseLogger databaseLogger=new DatabaseLogger();
+	//logger.log(customer.getFirstName()+"veri tabanina loglandi");
+}
+}

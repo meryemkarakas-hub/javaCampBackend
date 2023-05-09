@@ -1,0 +1,33 @@
+package interfaces;
+
+public class Customer {
+private int id;
+private String firstNmae;
+private String lastName;
+public Customer() {
+}
+public Customer(int id, String firstNmae, String lastName) {
+	super();
+	this.id = id;
+	this.firstNmae = firstNmae;
+	this.lastName = lastName;
+}
+public int getId() {
+	return id;
+}
+public void setId(int id) {
+	this.id = id;
+}
+public String getFirstNmae() {
+	return firstNmae;
+}
+public void setFirstNmae(String firstNmae) {
+	this.firstNmae = firstNmae;
+}
+public String getLastName() {
+	return lastName;
+}
+public void setLastName(String lastName) {
+	this.lastName = lastName;
+}
+}

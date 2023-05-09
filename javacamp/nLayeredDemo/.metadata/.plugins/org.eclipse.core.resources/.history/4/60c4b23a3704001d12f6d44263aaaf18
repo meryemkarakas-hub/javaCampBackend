@@ -1,0 +1,40 @@
+package nLayeredDemo.business.concretes;
+
+import java.util.List;
+
+import nLayeredDemo.business.abstracts.ProductService;
+import nLayeredDemo.core.JLoggerManagerAdapter;
+import nLayeredDemo.core.LoggerService;
+import nLayeredDemo.dataAccess.abstracts.ProductDao;
+import nLayeredDemo.entities.concretes.Product;
+
+public class ProductManager implements ProductService{
+private ProductDao productDao;
+private JLoggerManagerAdapter loggerService;
+	public ProductManager(ProductDao productDao,JLoggerManagerAdapter jLoggerManagerAdapter) {
+	super();
+	this.productDao = productDao;
+	this.loggerService=jLoggerManagerAdapter;
+}
+
+	@Override
+	public void add(Product product) {
+		//İş kodları
+		if(product.getCategoryId()==1) {
+			System.out.println("Bu kategoride urun kabul edilmiyor");
+			return;
+		}
+		this.productDao.add(product);
+		this.loggerService.logToSystem("Urun eklendi: "+product.getName());
+		/*HibernateProductDao dao=new HibernateProductDao();
+		dao.add(product);*/
+		
+	}
+
+	@Override
+	public List<Product> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

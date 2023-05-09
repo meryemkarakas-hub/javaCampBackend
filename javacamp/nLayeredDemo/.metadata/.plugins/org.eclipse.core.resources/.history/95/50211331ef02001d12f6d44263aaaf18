@@ -1,0 +1,15 @@
+package oopIntro;
+
+public class Product {
+	public Product() {//constructor
+		System.out.println("Ben calistim");
+	}
+	public Product(int id, String name, double unitPrice,String detail) {//overloading aynı isimde birden fazla metodumuz olduğunda overloading
+		
+	}
+	
+ int id;
+ String name;
+ double unitPrice;
+ String detail;
+}

@@ -1,0 +1,6 @@
+package nLayeredDemo.core;
+
+public class LoggerService {
+void logToSystem(String message) {
+}
+}
